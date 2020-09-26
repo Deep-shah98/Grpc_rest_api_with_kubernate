@@ -1,0 +1,110 @@
+{
+    "Id": "sha256:fbd86b3a9826dd7a73b62b0a6bd0a15e5996f74717bb01c0fe49b685d6298e17",
+    "RepoTags": [
+        "deeprs/hello-client:v1.0"
+    ],
+    "RepoDigests": [
+        "deeprs/hello-client@sha256:64b07f8b822e3ee2f0a7e2c36e58c47cc8619449068c3509c178374ef4e0d0f7"
+    ],
+    "Parent": "sha256:b85003645c2714fa91c86d2f33ca06e1fd4fa5d0c3f99ffb0ba575c2b71bd99f",
+    "Comment": "",
+    "Created": "2020-09-24T11:45:54.842414489Z",
+    "Container": "98fb49458c43342039715fb718922833e6eb53d56590f8f5a5f85ab6a8eaf819",
+    "ContainerConfig": {
+        "Hostname": "98fb49458c43",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "ExposedPorts": {
+            "50051/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+            "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOLANG_VERSION=1.15.2",
+            "GOPATH=/go"
+        ],
+        "Cmd": [
+            "/bin/sh",
+            "-c",
+            "#(nop) ",
+            "EXPOSE 50051"
+        ],
+        "Image": "sha256:b85003645c2714fa91c86d2f33ca06e1fd4fa5d0c3f99ffb0ba575c2b71bd99f",
+        "Volumes": null,
+        "WorkingDir": "/go/src/github.com/hello",
+        "Entrypoint": [
+            "/bin/sh",
+            "-c",
+            "go run client.go"
+        ],
+        "OnBuild": null,
+        "Labels": {}
+    },
+    "DockerVersion": "19.03.12",
+    "Author": "",
+    "Config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "ExposedPorts": {
+            "50051/tcp": {}
+        },
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+            "PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOLANG_VERSION=1.15.2",
+            "GOPATH=/go"
+        ],
+        "Cmd": null,
+        "Image": "sha256:b85003645c2714fa91c86d2f33ca06e1fd4fa5d0c3f99ffb0ba575c2b71bd99f",
+        "Volumes": null,
+        "WorkingDir": "/go/src/github.com/hello",
+        "Entrypoint": [
+            "/bin/sh",
+            "-c",
+            "go run client.go"
+        ],
+        "OnBuild": null,
+        "Labels": null
+    },
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 838924946,
+    "VirtualSize": 838924946,
+    "GraphDriver": {
+        "Data": {
+            "LowerDir": "/var/lib/docker/overlay2/c8e7c45d8224fb8e9f26ae23e8e1bc833fbe04c7802518d61e52acf6ac9f02bb/diff:/var/lib/docker/overlay2/f56313e58282a9aca18736f190e29d40c48ab49d7ad67e93f9e1612e7891cba9/diff:/var/lib/docker/overlay2/d40f198b5e3ca284cecc9e7b60798c4cd27dd67a0e14b7827eb74c2ceab923b7/diff:/var/lib/docker/overlay2/4407fd9f7031eb78eeee63517856e07764ec03d3250e62a69c0e7656405732cf/diff:/var/lib/docker/overlay2/b809167bfea7ef3d8d8530721276f34d641f54ea533d3481747a3f20585507ba/diff:/var/lib/docker/overlay2/026d2dc921bacbcc9f59ff72b7ab5217ef6114aace57d82833fd2a5eaf1a17c2/diff:/var/lib/docker/overlay2/2b1ec7863cbf2fc5e509e29fcf934c24229785d26f21075196e1201712032010/diff",
+            "MergedDir": "/var/lib/docker/overlay2/4c4abf890de865d47f36f3871546417073ebc1db44e9e6e636085cfc96e46e3a/merged",
+            "UpperDir": "/var/lib/docker/overlay2/4c4abf890de865d47f36f3871546417073ebc1db44e9e6e636085cfc96e46e3a/diff",
+            "WorkDir": "/var/lib/docker/overlay2/4c4abf890de865d47f36f3871546417073ebc1db44e9e6e636085cfc96e46e3a/work"
+        },
+        "Name": "overlay2"
+    },
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:4ef54afed7804a44fdeb8cf6562c2a1eb745dcaabd38b1ac60126f0966bf6aef",
+            "sha256:6add0d2b5482578ccb2eeed7d7dac7c4c258722884db7e69c1739fd9f69a93dc",
+            "sha256:d37096232ed8372a371df462c953a61381c8a62424eebd8d260941a5473b0957",
+            "sha256:17bdf5e22660221184ed52356cf4e74d5c4cd0af9ad6326c4f683b15b41621d4",
+            "sha256:6b6e43b44148bfabdbe087a3eeca048856ed2b40c157320425d9c1e54921d3b2",
+            "sha256:d2588c27d938825b1e0d6fda1f349d42cb7773b94681d8b331e7757820c7570e",
+            "sha256:1ba6a3ca6c41eaa259c9c56e7e29a4387d75de493bdccfc1d4baf267ef95fdb6",
+            "sha256:9aec7856349a792bb1b8bd28dd6177fe66a82561977ef4eb288aaa5933173c5e"
+        ]
+    },
+    "Metadata": {
+        "LastTagTime": "2020-09-24T12:15:55.267992006Z"
+    },
+    "CreatedTime": 1600947954842
+}
