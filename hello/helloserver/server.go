@@ -6,12 +6,23 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 
 	"github.com/hello/hellopb"
 	"google.golang.org/grpc"
 )
 
 type server struct {
+}
+
+func doEvery(d time.Duration, f func(time.Time)) {
+	for x := range time.Tick(d) {
+		f(x)
+	}
+}
+
+func helloworld(t time.Time) {
+	fmt.Printf("%v: Hello, World!\n", t)
 }
 
 func (*server) Hello(ctx context.Context, request *hellopb.HelloRequest) (*hellopb.HelloResponse, error) {
@@ -34,4 +45,5 @@ func main() {
 	hellopb.RegisterHelloServiceServer(s, &server{})
 
 	s.Serve(lis)
+	doEvery(20*time.Millisecond, helloworld)
 }
