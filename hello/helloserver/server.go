@@ -22,7 +22,7 @@ func doEvery(d time.Duration, f func(time.Time)) {
 }
 
 func helloworld(t time.Time) {
-	fmt.Printf("%v: Hello, World!\n", t)
+	fmt.Printf("%v: Hello!\n", t)
 }
 
 func (*server) Hello(ctx context.Context, request *hellopb.HelloRequest) (*hellopb.HelloResponse, error) {
@@ -45,5 +45,5 @@ func main() {
 	hellopb.RegisterHelloServiceServer(s, &server{})
 
 	s.Serve(lis)
-	doEvery(20*time.Millisecond, helloworld)
+	doEvery(5000*time.Millisecond, helloworld)
 }
