@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloserver-deployment
+  labels:
+    app: helloserver
+spec:
+  selector:
+    matchLabels:
+      app: helloserver
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: helloserver
+    spec:
+      containers:
+        - name: helloserver
+          image: deeprs/helloserver:v1.0
+          ports:
+            - name: helloserver
+              containerPort: 50051
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloserver
+spec:
+  selector:
+    app: helloserver
+  ports:
+    - port: 50051
+      targetPort: helloserver
